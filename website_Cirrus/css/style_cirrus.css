@@ -1,0 +1,382 @@
+/*------------------------*/
+/* $font import
+--------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*------------------------*/
+/* $Globel
+--------------------------*/
+body{
+	font-family: 'Roboto Slab', 'arial', sans-serif;
+}
+.wrapper{
+	background-color: #1c1c1c;
+}
+/*------------------------*/
+/* $Text
+--------------------------*/
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+.heading{
+	font-size: 64px;
+	color: #fff;
+	margin-bottom: 56px;
+}
+/*------------------------*/
+/* $Icon
+--------------------------*/
+
+
+/*------------------------*/
+/* $Buttom
+--------------------------*/
+.btn{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin: 0;
+	padding: 8px 56px;
+	box-sizing: border-box;
+	font-size: 20px;
+	line-height: 32px;
+	vertical-align: center;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #00b6c4;
+	border: 3px solid #00b6c4;
+	border-radius: 10px;
+	/*background: rgba(255,255,255,0.3);*/
+	outline: none;
+	cursor: pointer;
+	overflow: hidden;
+	user-select: none;
+	user-drag: none;
+	transition: all 0.3s;
+}
+.btn:hover{
+	background-color: #00b6c4;
+	color: #fff;
+}
+/*------------------------*/
+/* $Side-nav
+--------------------------*/
+.side-nav{
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.side-nav_item{
+	display: inline-block;
+	color: #fff;
+	font-size: 18px;
+	width: 160px;
+	/*border: 1px solid #fff;*/
+	margin-top: 8px;
+	margin-bottom: 8px;
+	height: 20px;
+	line-height: 18px;
+}
+.side-nav_item span{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 0.3s;
+}
+.side-nav .active .side-nav_item span{
+	left: 32px;
+}
+.side-nav_item:before{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 0%;
+	background-color: #00b6c4;
+	border-radius: 2px;
+	transition: all 0.3s;
+}
+.side-nav .active .side-nav_item:before{
+	width: 100%;
+
+}
+/*------------------------*/
+/* $Layout
+--------------------------*/
+
+
+/*------------------------*/
+/* $Header
+--------------------------*/
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+.navbar__logo{
+	display: inline-block;
+	width: 144px;
+	height: 144px;
+	border-radius: 0 0 8px 8px;
+	background: url(../image_cirrus/Cirus-logo-W.svg) #000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80px;
+	float: left;
+	transition: all 0.3s;
+}
+.header--scrolling .navbar__logo{
+	height: 80px;
+	background-color: inherit;
+	background-size: 60px;
+}
+.navbar__nav{
+	float: right;
+}
+.nav__menu {
+	float: left;
+}
+.nav__menu li{
+	float: left;
+}
+.nav__menu .menu__item{
+	display: block;
+	padding: 24px;
+	color: #fff;
+	line-height: 32px;
+	font-size: 18px;
+	transition: all 0.3s;
+	/*border: 1px solid #fff;*/
+}
+.nav__menu .menu__item:hover{
+	color: #00b6c4;
+}
+/*------------------------*/
+/* $Hero
+--------------------------*/
+.hero--bg-covered{
+	background-image: url(../image_cirrus/127977634-concept-of-a-data-center-room-with-servers-and-network-effects.png);
+	background-size: cover;
+	background-position: center;
+}
+.hero--bg-covered:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #161616;
+	opacity: 0.7;
+}
+.scrolldown-btn{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	position: absolute;
+	bottom: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-image: url(../image_cirrus/arrow.svg);
+	background-size: 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	animation: breath 2s infinite;
+}
+@keyframes breath{
+	0%{opacity: 0.3;}
+	50%{opacity: 1;}
+	100%{opacity: 0.3;}
+}
+/*------------------------*/
+/* $Product
+--------------------------*/
+.product{
+	color: #fff;
+	padding-top: 60px;
+}
+.product__title{
+	font-size: 40px;
+	margin-bottom: 16px;
+}
+.product__subtitle{
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 48px;
+	padding-bottom: 24px;
+}
+.product__subtitle:before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 160px;
+	height: 4px;
+	background-color: #00b6c4;
+}
+.product__text{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+}
+.product__btn{
+	margin-top: 32px;
+}
+.product-group{
+	/*border: 1px solid red;*/
+	font-family: 'arial';
+}
+.row-1{
+	margin-bottom: 32px;
+}
+.product-card{
+	/*border: 1px solid red;*/
+	background-color: #fefefe;
+	border-radius: 8px;
+	padding: 16px;
+	height: 240px;
+}
+.product__icon{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;	
+	/*border: 1px solid red;*/
+	margin-bottom: 16px;
+}
+.product-card__title{
+	margin-bottom: 8px;
+	padding-left: 12px;
+}
+.product-card__title:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 20px;
+	background-color: #00b6c4;
+}
+/*------------------------*/
+/* $Service
+--------------------------*/
+.thumbnail{
+	color: #fff;
+	font-family: 'arial';
+}
+.thumbnail__title{
+	font-size: 24px;
+	color: #00b6c4;
+	padding-top: 16px;
+}
+.thumbnail__text{
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 32px;
+	padding-top: 10px;
+}
+.thumbnail__imgbox{
+	/*border: 1px solid red;*/
+	width: 100%;
+	padding-top: calc(100% * 9 / 16);
+}
+.thumbnail__imgbox .image{
+	/*border: 1px solid #fff;*/
+	border-radius: 8px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 100%;
+	max-height: 100%;
+}
+/*------------------------*/
+/* $About
+--------------------------*/
+
+
+/*------------------------*/
+/* $Contact
+--------------------------*/
+.contact{
+	color: #fff;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.contact__item{
+	margin-bottom: 24px;
+}
+.contact__label{
+	color: #00b6c4;
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+.contact__link{
+	color: #fff;
+	display: inline-block;
+}
+/*------------------------*/
+/* $Footer
+--------------------------*/
+.footer{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #282828;
+}
+.footer__logo{
+	display: block;
+	width: 120px;
+	height: 40px;
+	/*border: 1px solid red;*/
+	background-image: url(../image_cirrus/footer-logo.svg);
+	background-position: /*-4px*/ center;
+	background-size: cover;
+	margin-bottom: 8px;
+}
+.copyright{
+	text-align: center;
+	font-size: 14px;
+	margin-top: 24px;
+	color: #484848;
+}
+/* list */
+.list{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.list__link{
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 16px;
+}
+/*------------------------*/
+/* $Parallax image
+--------------------------*/
+.Parallax-container{
+	/*border: 1px solid red;*/
+	margin-left: -16px;
+	padding-top: 50px;
+}
+.Parallax-container .image{
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	/*border: 1px solid red;*/
+}
+
+
+
+
+
+
+
+
+
+
+
